@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <title>{{ page.title | default: "Blog UNIR" }}</title>
-    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}" />
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
   </head>
   <body>
-    <header class="header">
-      <img src="{{ '/Images/logo-unir.jpg' | relative_url }}" alt="Logo UNIR" />
+    <header>
+      <img src="{{ '/assets/logo-unir.png' | relative_url }}" alt="Logo UNIR">
       <h1>BLOG UNIR</h1>
-      <p>Manuel Mijangos</p>
     </header>
 
-    <main class="wrapper">
+    <div class="author">Manuel Mijangos</div>
+
+    <main>
       {{ content }}
     </main>
 
-    <footer class="footer">
-      Este es un Blog sencillo desarrollado en la herramienta Jekyll usando Markdown, para UNIR, para la asignatura de Desarrollo de aplicaciones en Red.
+    <footer>
+      <p>
+        Este es un Blog sencillo desarrollado en la herramienta Jekyll usando Markdown, para UNIR, para la asignatura de Desarrollo de aplicaciones en Red.
+      </p>
     </footer>
   </body>
 </html>
