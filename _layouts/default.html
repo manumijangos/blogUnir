@@ -4,63 +4,25 @@
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-    <style>
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 30px 0;
-      }
-
-      .header img {
-        max-height: 90px; /* 1.5x más grande que los 60px anteriores */
-        margin-right: 20px;
-      }
-
-      .header-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .header-text h1 {
-        margin: 0;
-        font-size: 2.25em; /* 1.5x más grande que 1.5em */
-        font-weight: bold;
-      }
-
-      .header-text p {
-        margin: 0;
-        font-size: 1em;
-        color: #333;
-      }
-
-      .footer {
-        margin-top: 50px;
-        padding: 20px;
-        font-size: 0.9em;
-        color: #666;
-        text-align: center;
-        border-top: 1px solid #ddd;
-      }
-    </style>
   </head>
   <body>
-    <header class="header">
-      <img src="{{ '/Images/logo-unir.jpg' | relative_url }}" alt="Logo UNIR">
-      <div class="header-text">
-        <h1>BLOG UNIR</h1>
-        <p>Manuel Mijangos</p>
+    <header class="site-header">
+      <div class="header-container">
+        <img src="{{ '/Images/logo-unir.jpg' | relative_url }}" alt="Logo UNIR" class="logo">
+        <div class="title-container">
+          <h1 class="site-title">BLOG UNIR</h1>
+          <p class="author-name">Manuel Mijangos</p>
+        </div>
       </div>
     </header>
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    <main class="page-content" aria-label="Contenido">
+      <div class="content-wrapper">
         {{ content }}
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="site-footer">
       Este es un Blog sencillo desarrollado en la herramienta Jekyll usando Markdown, para UNIR, para la asignatura de Desarrollo de aplicaciones en Red.
     </footer>
   </body>
